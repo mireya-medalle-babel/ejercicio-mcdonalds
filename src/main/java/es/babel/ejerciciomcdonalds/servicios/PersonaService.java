@@ -23,7 +23,7 @@ public class PersonaService implements IPersonaService {
 
     @Override
     public Persona getPersona(int id) {
-        return null;
+        return iFakeDBPersona.getPersona(id);
     }
 
     @Override
@@ -38,9 +38,8 @@ public class PersonaService implements IPersonaService {
     }
 
     @Override
-    public boolean deletePersona(int id) {
-        iFakeDBPersona.deletePersona(id);
-        return false;
+    public Persona deletePersona(int id) {
+        return iFakeDBPersona.deletePersona(id);
     }
 
 }

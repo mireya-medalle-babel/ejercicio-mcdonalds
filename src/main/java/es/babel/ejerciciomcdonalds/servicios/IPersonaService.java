@@ -14,5 +14,5 @@ public interface IPersonaService {
 
     boolean addPersona(Persona persona);
 
-    boolean deletePersona(int id);
+    Persona deletePersona(int id);
 }
