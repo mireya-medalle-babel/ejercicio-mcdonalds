@@ -14,5 +14,5 @@ public interface IFakeDBPersona {
 
     Persona getPersona(int id);
 
-    void deletePersona(int id);
+    Persona deletePersona(int id);
 }

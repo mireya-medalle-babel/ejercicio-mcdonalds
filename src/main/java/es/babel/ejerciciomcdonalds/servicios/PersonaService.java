@@ -38,9 +38,8 @@ public class PersonaService implements IPersonaService {
     }
 
     @Override
-    public boolean deletePersona(int id) {
-        iFakeDBPersona.deletePersona(id);
-        return false;
+    public Persona deletePersona(int id) {
+        return iFakeDBPersona.deletePersona(id);
     }
 
 }
