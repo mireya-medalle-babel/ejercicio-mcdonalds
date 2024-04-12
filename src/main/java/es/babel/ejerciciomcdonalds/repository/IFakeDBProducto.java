@@ -8,4 +8,12 @@ public interface IFakeDBProducto {
     void inicializarProductos();
 
     List<Producto> listarProductos();
+
+    int cuantosProductosHay(int id);
+
+    void push(Producto producto);
+
+    Producto pop(int id);
+
+    void cambiarCantidadProducto(int id, int cantidad);
 }
