@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -13,6 +15,6 @@ public class Pedido {
 
 	private String nombreCliente;
 	private Date fechaOrden;
-	private String[] productos;
-	
+	private List<Producto> productos;
+	private Persona empleadoACargo;
 }
