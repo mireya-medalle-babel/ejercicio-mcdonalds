@@ -23,7 +23,7 @@ public class PersonaService implements IPersonaService {
 
     @Override
     public Persona getPersona(int id) {
-        return null;
+        return iFakeDBPersona.getPersona(id);
     }
 
     @Override

@@ -32,6 +32,17 @@ public class FakeDBPersona implements IFakeDBPersona {
     }
 
     @Override
+    public Persona getPersona(int id) {
+        Persona persona = null;
+        for (int x = 0; x < personaRepository.size(); x++) {
+            if (id == personaRepository.get(x).getId()) {
+                persona = personaRepository.get(x);
+                break;
+            }
+        }
+        return persona;
+    }
+    @Override
     public void deletePersona(int id) {
         Persona persona = null;
         for (int x = 0; x < personaRepository.size(); x++) {
