@@ -9,5 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Persona {
     int id;
+    String dni;
     String nombre;
+    String cargo;
 }

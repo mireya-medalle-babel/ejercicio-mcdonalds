@@ -1,21 +1,20 @@
 package es.babel.ejerciciomcdonalds.servicios;
 
 import es.babel.ejerciciomcdonalds.model.Persona;
-import es.babel.ejerciciomcdonalds.model.Plantilla;
-import es.babel.ejerciciomcdonalds.repositorio.IFakeDBPersona;
+import es.babel.ejerciciomcdonalds.repository.IFakeDBPersona;
 
 import java.util.List;
 
-public class PlantillaService implements IPlantillaService {
+public class PersonaService implements IPersonaService {
 
     private final IFakeDBPersona iFakeDBPersona;
 
-    public PlantillaService(IFakeDBPersona iFakeDBPersona) {
+    public PersonaService(IFakeDBPersona iFakeDBPersona) {
         this.iFakeDBPersona = iFakeDBPersona;
     }
 
     @Override
-    public void inicializarPlantilla() {
+    public void inicializarPersona() {
 
     }
 
@@ -25,17 +24,17 @@ public class PlantillaService implements IPlantillaService {
     }
 
     @Override
-    public List<Plantilla> listarPlantilla() {
+    public List<Persona> listarPersona() {
         return null;
     }
 
     @Override
-    public boolean addPersonal() {
+    public boolean addPersona() {
         return false;
     }
 
     @Override
-    public boolean deletePersonal(int id) {
+    public boolean deletePersona(int id) {
         return false;
     }
 }
