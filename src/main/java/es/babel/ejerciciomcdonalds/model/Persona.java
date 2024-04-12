@@ -10,5 +10,4 @@ import lombok.NoArgsConstructor;
 public class Persona {
     int id;
     String nombre;
-    String cargo;
 }
