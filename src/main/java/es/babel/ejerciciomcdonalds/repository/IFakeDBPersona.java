@@ -10,4 +10,7 @@ public interface IFakeDBPersona {
     List<Persona> listarPersonas();
 
 
+    void addPersona(Persona persona);
+
+    void deletePersona(int id);
 }
