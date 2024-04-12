@@ -15,8 +15,8 @@ public class FakeDBProducto implements IFakeDBProducto {
     public void inicializarProductos() {
         productosRepository = new ArrayList<>();
         productosRepository.add(new Producto(1, "hamburguesa", 3));
-        productosRepository.add(new Producto(1, "coca cola", 3));
-        productosRepository.add(new Producto(1, "Patatas", 5));
+        productosRepository.add(new Producto(2, "coca cola", 3));
+        productosRepository.add(new Producto(3, "Patatas", 5));
     }
 
     @Override
