@@ -35,7 +35,7 @@ public class FakeDBPedido implements IFakeDBPedido {
         List<Producto> sublistProductos = getAllProductos().subList(1,2);
         Persona personaPedido1 = getAllPersonas().get(0);
 
-        pedidoRepository.add(new Pedido(1L, "Cliente1", new Date(), sublistProductos, personaPedido1));
+        pedidoRepository.add(new Pedido(1L, "Cliente1", new Date(), sublistProductos, personaPedido1, "Pendiente"));
         fakeDBProducto.cambiarCantidadProducto(getAllProductos().get(1).getId(), 1);
         fakeDBProducto.cambiarCantidadProducto(getAllProductos().get(2).getId(), 1);
 
@@ -45,5 +45,50 @@ public class FakeDBPedido implements IFakeDBPedido {
     public List<Pedido> listarPedidos() {
         return pedidoRepository;
     }
+
+    @Override
+    public void altaPedido(){
+        Pedido nuevoPedido = new Pedido();
+    }
+
+    @Override
+    public void addProductos(List<Producto> productos, long idPedido) {
+        Pedido pedido = null;
+
+        for (int x = 0; x < pedidoRepository.size(); x++) {
+            if (idPedido == pedidoRepository.get(x).getId()) {
+                pedido = pedidoRepository.get(x);
+                pedido.setProductos(productos);
+                break;
+            }
+        }
+    }
+
+    @Override
+    public void asignarEmpleado (Persona empleado, long idPedido) {
+        Pedido pedido = null;
+
+        for (int x = 0; x < pedidoRepository.size(); x++) {
+            if (idPedido == pedidoRepository.get(x).getId()) {
+                pedido = pedidoRepository.get(x);
+                pedido.setEmpleadoACargo(empleado);
+                break;
+            }
+        }
+    }
+
+    @Override
+    public void finalizarPedido(int idPedido) {
+        Pedido pedido = null;
+
+        for (int x = 0; x < pedidoRepository.size(); x++) {
+            if (idPedido == pedidoRepository.get(x).getId()) {
+                pedido = pedidoRepository.get(x);
+                pedido.setEstado("finalizar");
+                break;
+            }
+        }
+    }
+
 
 }

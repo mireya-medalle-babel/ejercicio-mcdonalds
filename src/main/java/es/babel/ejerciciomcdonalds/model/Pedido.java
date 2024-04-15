@@ -17,4 +17,5 @@ public class Pedido {
 	private Date fechaOrden;
 	private List<Producto> productos;
 	private Persona empleadoACargo;
+	private String estado;
 }
