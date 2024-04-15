@@ -55,15 +55,19 @@ public class FakeDBProducto implements IFakeDBProducto {
     }
 
     @Override
-    public void cambiarCantidadProducto(int id, int cantidad) {
+    public boolean cambiarCantidadProducto(int id, int cantidad) {
         Producto producto = null;
+
         for (Producto value : productosRepository) {
             if (id == value.getId()) {
                 producto = value;
-                producto.setCantidad(producto.getCantidad() - cantidad);
-                break;
+                if (producto.getCantidad() >= cantidad) {
+                    producto.setCantidad(producto.getCantidad() - cantidad);
+                    return true;
+                }
             }
         }
+        return false;
     }
 
 

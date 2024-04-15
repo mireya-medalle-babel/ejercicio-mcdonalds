@@ -15,5 +15,5 @@ public interface IFakeDBProducto {
 
     Producto pop(int id);
 
-    void cambiarCantidadProducto(int id, int cantidad);
+    boolean cambiarCantidadProducto(int id, int cantidad);
 }

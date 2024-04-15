@@ -27,7 +27,7 @@ public class PedidoController {
         return pedidoService.listarPedidos();
     }
 
-    @PostMapping(value = "/")
+    @PostMapping(value = "")
     public void altaPedido() {
        pedidoService.altaPedido();
 
